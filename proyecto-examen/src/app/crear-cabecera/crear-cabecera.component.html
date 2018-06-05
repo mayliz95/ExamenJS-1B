@@ -6,8 +6,18 @@
     </div>
     <div class="col-sm-2"></div>
   </div>
-  <app-texto-input></app-texto-input>
-  <app-texto-input></app-texto-input>
-  <app-texto-input></app-texto-input>
-  <app-texto-input></app-texto-input>
+  <div *ngFor="let atributo of arregloAtributos; let indice=index">
+    <app-texto-input [tituloInput]='atributo'></app-texto-input>
+  </div>
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-4">
+      <button mat-raised-button color="accent">Limpiar</button>
+    </div>
+    <div class="col-sm-2"></div>
+    <div class="col-sm-4">
+      <button mat-raised-button color="accent">Crear</button>
+    </div>
+    <div class="col-sm-1"></div>
+  </div>
 </div>

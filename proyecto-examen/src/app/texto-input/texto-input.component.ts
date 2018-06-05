@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-texto-input',
@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./texto-input.component.css']
 })
 export class TextoInputComponent implements OnInit {
+
+  @Input() tituloInput: string;
+  valor: string;
 
   constructor() { }
 
