@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Paciente} from "../paciente";
+import {Medicamento} from "../medicamento";
 
 @Component({
   selector: 'app-crear-detalle',
@@ -7,10 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CrearDetalleComponent implements OnInit {
 
-  ArregloAtributosDetalle = ['gramosAIngerir','nombre','composicion','usadoPara', 'fechaCaducidad', 'numeroPastillas' , 'pacienteId'];
-  constructor() { }
+  @Output() medicamentoCreado: EventEmitter<Medicamento> = new EventEmitter<Medicamento>();
+  medicamento: Medicamento;
+
+  constructor() {
+    this.medicamento = new Medicamento();
+  }
 
   ngOnInit() {
+  }
+
+  guardarEnArreglo() {
+    this.medicamentoCreado.emit(this.medicamento);
+    this.medicamento = new Medicamento();
   }
 
 }

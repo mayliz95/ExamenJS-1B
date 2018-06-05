@@ -6,9 +6,91 @@
     </div>
     <div class="col-sm-2"></div>
   </div>
-  <div *ngFor="let atributo of arregloAtributos; let indice=index">
-    <app-texto-input [tituloInput]='atributo'></app-texto-input>
+
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-4">
+      <label style="padding-top: 20px">Id</label>
+    </div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-5">
+      <mat-form-field style="width: 120px">
+        <input matInput placeholder="Text" name="id" [(ngModel)]="paciente.Id">
+      </mat-form-field>
+    </div>
+    <div class="col-sm-1"></div>
   </div>
+
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-4">
+      <label style="padding-top: 20px">Nombres</label>
+    </div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-5">
+      <mat-form-field style="width: 120px">
+        <input matInput placeholder="Text" name="nombres" [(ngModel)]="paciente.Nombres">
+      </mat-form-field>
+    </div>
+    <div class="col-sm-1"></div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-4">
+      <label style="padding-top: 20px">Apellidos</label>
+    </div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-5">
+      <mat-form-field style="width: 120px">
+        <input matInput placeholder="Text" name="apellidos" [(ngModel)]="paciente.Apellidos">
+      </mat-form-field>
+    </div>
+    <div class="col-sm-1"></div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-4">
+      <label style="padding-top: 20px">Fecha Nacimiento</label>
+    </div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-5">
+      <mat-form-field style="width: 120px">
+        <input matInput placeholder="Text" name="fechaNacimiento" [(ngModel)]="paciente.Fecha_Nacimiento">
+      </mat-form-field>
+    </div>
+    <div class="col-sm-1"></div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-4">
+      <label style="padding-top: 20px">Hijos</label>
+    </div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-5">
+      <mat-form-field style="width: 120px">
+        <input matInput placeholder="Text" name="Hiijos" [(ngModel)]="paciente.Hijos">
+      </mat-form-field>
+    </div>
+    <div class="col-sm-1"></div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-4">
+      <label style="padding-top: 20px">Tiene Seguro</label>
+    </div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-5">
+      <mat-form-field style="width: 120px">
+        <input matInput placeholder="Text" name="tieneSeguro" [(ngModel)]="paciente.Tiene_Seguro">
+      </mat-form-field>
+    </div>
+    <div class="col-sm-1"></div>
+  </div>
+
   <div class="row">
     <div class="col-sm-1"></div>
     <div class="col-sm-4">
@@ -16,7 +98,7 @@
     </div>
     <div class="col-sm-2"></div>
     <div class="col-sm-4">
-      <button mat-raised-button color="accent">Crear</button>
+      <button mat-raised-button color="accent" (click)="guardarEnArreglo()">Crear</button>
     </div>
     <div class="col-sm-1"></div>
   </div>

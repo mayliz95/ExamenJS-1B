@@ -1,20 +1,22 @@
-<p-table [value]="completeTable">
+<p-table [value]="datosTablaDetalle">
   <ng-template pTemplate="header">
     <tr>
-      <th>id</th>
-      <th>first name</th>
-      <th>last name</th>
-      <th>medium</th>
-      <th>Twitter</th>
+      <th>Gramos a ingerir</th>
+      <th>nombre</th>
+      <th>composicion</th>
+      <th>usadoPara</th>
+      <th>fechaCaducidad</th>
+      <th>numeroPastillas</th>
     </tr>
   </ng-template>
-  <ng-template pTemplate="body" let-completeTable>
+  <ng-template pTemplate="body" let-datosTablaDetalle>
     <tr>
-      <td>{{completeTable.id}}</td>
-      <td>{{completeTable.first_name}}</td>
-      <td>{{completeTable.last_name}}</td>
-      <td>{{completeTable.medium}}</td>
-      <td>{{completeTable.twitter}}</td>
+      <td>{{datosTablaDetalle.gramosAIngerir}}</td>
+      <td>{{datosTablaDetalle.nombre}}</td>
+      <td>{{datosTablaDetalle.composicion}}</td>
+      <td>{{datosTablaDetalle.usadoPara}}</td>
+      <td>{{datosTablaDetalle.fechaCaducidad}}</td>
+      <td>{{datosTablaDetalle.numeroPastillas}}</td>
     </tr>
   </ng-template>
 </p-table>

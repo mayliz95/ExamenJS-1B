@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Paciente} from "../paciente";
+import {Medicamento} from "../medicamento";
 
 @Component({
   selector: 'app-crear-cabecera',
@@ -7,15 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CrearCabeceraComponent implements OnInit {
 
-  arregloAtributos = ['Nombres', 'Apellidos', 'Fecha Nacimiento', 'Hijos', 'Tiene seguro'];
+  @Output() pacienteCreado: EventEmitter<Paciente> = new EventEmitter<Paciente>();
+  paciente: Paciente;
 
-  constructor() { }
+  constructor() {
+    this.paciente =  new Paciente();
+    this.paciente.Medicamentos =  [];
+  }
 
   ngOnInit() {
   }
 
-  guardarEnArreglo(nombre: string, apelidos: string, fechaNacimiento: string, hijos: number, tieneSeguro: boolean) {
-
+  guardarEnArreglo() {
+    console.log(JSON.stringify(this.paciente));
+    this.pacienteCreado.emit(this.paciente);
+    this.paciente = new Paciente();
+    this.paciente.Medicamentos =  [];
   }
-
 }

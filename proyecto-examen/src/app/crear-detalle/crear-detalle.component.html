@@ -7,9 +7,84 @@
     <div class="col-sm-2"></div>
   </div>
   <br>
-  <div *ngFor="let atributo of ArregloAtributosDetalle ; let indice=index">
-    <app-texto-input-primeng [tituloInput]='atributo'></app-texto-input-primeng>
+
+  <div class="row">
+    <div class="col-sm-4">
+      <label>Gramos a Ingerir</label>
+    </div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-5">
+      <input id="inputGramosAIngerir" type="text" size="20" pInputText name="GramosIngerir" [(ngModel)]="medicamento.gramosAIngerir">
+    </div>
+    <div class="col-sm-2"></div>
   </div>
+
+  <div class="row">
+    <div class="col-sm-4">
+      <label>Nombre</label>
+    </div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-5">
+      <input id="inputNombre" type="text" size="20" pInputText name="nombre" [(ngModel)]="medicamento.nombre">
+    </div>
+    <div class="col-sm-2"></div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-4">
+      <label>Composicion</label>
+    </div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-5">
+      <input id="inputComposicion" type="text" size="20" pInputText name="Composicion" [(ngModel)]="medicamento.composicion">
+    </div>
+    <div class="col-sm-2"></div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-4">
+      <label>Usado Para</label>
+    </div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-5">
+      <input id="inputUsadoPara" type="text" size="20" pInputText name="UsadoPara" [(ngModel)]="medicamento.usadoPara">
+    </div>
+    <div class="col-sm-2"></div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-4">
+      <label>Fecha Caducidad</label>
+    </div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-5">
+      <input id="inputFechaCaducidad" type="text" size="20" pInputText name="FechaCaducidad" [(ngModel)]="medicamento.fechaCaducidad">
+    </div>
+    <div class="col-sm-2"></div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-4">
+      <label>numeroPastillas</label>
+    </div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-5">
+      <input id="inputNumPastillas" type="text" size="20" pInputText name="numeroPastillas" [(ngModel)]="medicamento.numeroPastillas">
+    </div>
+    <div class="col-sm-2"></div>
+  </div>
+
+  <!--<div class="row">-->
+    <!--<div class="col-sm-4">-->
+      <!--<label>Paciente Id</label>-->
+    <!--</div>-->
+    <!--<div class="col-sm-1"></div>-->
+    <!--<div class="col-sm-5">-->
+      <!--<input id="inputPacienteId" type="text" size="20" pInputText>-->
+    <!--</div>-->
+    <!--<div class="col-sm-2"></div>-->
+  <!--</div>-->
+
   <br>
   <div class="row">
     <div class="col-sm-1"></div>
@@ -18,7 +93,7 @@
     </div>
     <div class="col-sm-2"></div>
     <div class="col-sm-4">
-      <button pButton type="button" label="Crear" class="ui-button-success"></button>
+      <button pButton type="button" label="Crear" class="ui-button-success" (click)="guardarEnArreglo()"></button>
     </div>
     <div class="col-sm-1"></div>
   </div>

@@ -5,15 +5,27 @@
   </div>
   <div class="col-sm-2"></div>
   <div class="col-sm-4">
-    <app-crear-cabecera></app-crear-cabecera>
+    <app-crear-cabecera (pacienteCreado)="agregarPaciente($event)"></app-crear-cabecera>
   </div>
   <div class="col-sm-1"></div>
 </div>
-
+<br>
+<div class="row">
+  <div class="col-sm-2"></div>
+  <div class="col-sm-8">
+    <div *ngFor="let paciente of arregloPacientes let indice of index" class="col-sm-2">
+      <button (click)="seleccionarCabecera(paciente)">
+        {{paciente.Nombres + " " + paciente.Apellidos}}
+      </button>
+    </div>
+  </div>
+  <div class="col-sm-2"></div>
+</div>
+<br>
 <div class="row" style="padding-top: 100px;">
   <div class="col-sm-1"></div>
   <div class="col-sm-4">
-    <app-crear-detalle></app-crear-detalle>
+    <app-crear-detalle (medicamentoCreado)="agregarMedicamento($event)"></app-crear-detalle>
   </div>
   <div class="col-sm-2"></div>
   <div class="col-sm-4">
@@ -28,8 +40,7 @@
 <div class="row" style="padding-top: 100px;">
   <div class="col-sm-2"></div>
   <div class="col-sm-8">
-    <app-tabla-primeng></app-tabla-primeng>
+    <app-tabla-primeng [datosTablaDetalle]="pacienteSeleccionado.Medicamentos"></app-tabla-primeng>
   </div>
   <div class="col-sm-2"></div>
 </div>
-
