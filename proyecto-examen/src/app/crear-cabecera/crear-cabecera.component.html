@@ -1,100 +1,81 @@
 <div>
   <div class="row">
-    <div class="col-sm-2"></div>
+    <div class="col-sm-4"></div>
     <div class="col-sm-8">
-      <h3>Crear Cabecera</h3>
+      <h3>Crear Paciente</h3>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-4">
+      <label style="padding-top: 20px"> Nombres</label>
     </div>
     <div class="col-sm-2"></div>
-  </div>
-
-  <div class="row">
-    <div class="col-sm-1"></div>
     <div class="col-sm-4">
-      <label style="padding-top: 20px">Id</label>
-    </div>
-    <div class="col-sm-1"></div>
-    <div class="col-sm-5">
-      <mat-form-field style="width: 120px">
-        <input matInput placeholder="Text" name="id" [(ngModel)]="paciente.Id">
+      <mat-form-field style="width: 130px">
+        <input matInput placeholder="Nombres" name="nombres" [(ngModel)]="paciente.Nombres">
       </mat-form-field>
     </div>
-    <div class="col-sm-1"></div>
   </div>
 
   <div class="row">
-    <div class="col-sm-1"></div>
+    <div class="col-sm-2"></div>
     <div class="col-sm-4">
-      <label style="padding-top: 20px">Nombres</label>
+      <label style="padding-top: 20px"> Apellidos</label>
     </div>
-    <div class="col-sm-1"></div>
-    <div class="col-sm-5">
-      <mat-form-field style="width: 120px">
-        <input matInput placeholder="Text" name="nombres" [(ngModel)]="paciente.Nombres">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-4">
+      <mat-form-field style="width: 130px">
+        <input matInput placeholder="Apellidos" name="apellidos" [(ngModel)]="paciente.Apellidos">
       </mat-form-field>
     </div>
-    <div class="col-sm-1"></div>
   </div>
 
   <div class="row">
-    <div class="col-sm-1"></div>
+    <div class="col-sm-2"></div>
     <div class="col-sm-4">
-      <label style="padding-top: 20px">Apellidos</label>
+      <label style="padding-top: 20px"> Fecha Nacimiento</label>
     </div>
-    <div class="col-sm-1"></div>
-    <div class="col-sm-5">
-      <mat-form-field style="width: 120px">
-        <input matInput placeholder="Text" name="apellidos" [(ngModel)]="paciente.Apellidos">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-4">
+      <mat-form-field style="width: 130px">
+        <input matInput placeholder="Fecha Nacimiento" name="fechaNacimiento" [(ngModel)]="paciente.Fecha_Nacimiento">
       </mat-form-field>
     </div>
-    <div class="col-sm-1"></div>
   </div>
 
   <div class="row">
-    <div class="col-sm-1"></div>
+    <div class="col-sm-2"></div>
     <div class="col-sm-4">
-      <label style="padding-top: 20px">Fecha Nacimiento</label>
+      <label style="padding-top: 20px"> Hijos</label>
     </div>
-    <div class="col-sm-1"></div>
-    <div class="col-sm-5">
-      <mat-form-field style="width: 120px">
-        <input matInput placeholder="Text" name="fechaNacimiento" [(ngModel)]="paciente.Fecha_Nacimiento">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-4">
+      <mat-form-field style="width: 130px">
+        <input matInput placeholder="Hijos" name="Hiijos" [(ngModel)]="paciente.Hijos">
       </mat-form-field>
     </div>
-    <div class="col-sm-1"></div>
   </div>
 
   <div class="row">
-    <div class="col-sm-1"></div>
+    <div class="col-sm-2"></div>
     <div class="col-sm-4">
-      <label style="padding-top: 20px">Hijos</label>
+      <label style="padding-top: 20px"> Tiene Seguro</label>
     </div>
-    <div class="col-sm-1"></div>
-    <div class="col-sm-5">
-      <mat-form-field style="width: 120px">
-        <input matInput placeholder="Text" name="Hiijos" [(ngModel)]="paciente.Hijos">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-4">
+      <mat-form-field style="width: 130px">
+        <input matInput placeholder="Tiene Seguro" name="tieneSeguro" [(ngModel)]="paciente.Tiene_Seguro">
       </mat-form-field>
     </div>
-    <div class="col-sm-1"></div>
+    <!--div class="col-sm-1"></div-->
   </div>
-
+  <br>
   <div class="row">
-    <div class="col-sm-1"></div>
-    <div class="col-sm-4">
-      <label style="padding-top: 20px">Tiene Seguro</label>
-    </div>
-    <div class="col-sm-1"></div>
-    <div class="col-sm-5">
-      <mat-form-field style="width: 120px">
-        <input matInput placeholder="Text" name="tieneSeguro" [(ngModel)]="paciente.Tiene_Seguro">
-      </mat-form-field>
-    </div>
-    <div class="col-sm-1"></div>
-  </div>
-
-  <div class="row">
-    <div class="col-sm-1"></div>
-    <div class="col-sm-4">
-      <button mat-raised-button color="accent">Limpiar</button>
+    <div class="col-sm-3"></div>
+    <div class="col-sm-3">
+      <button mat-raised-button color="accent" (click)="limpiar()">Limpiar</button>
     </div>
     <div class="col-sm-2"></div>
     <div class="col-sm-4">

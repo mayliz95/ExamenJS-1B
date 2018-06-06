@@ -12,18 +12,19 @@ export class AppComponent {
   arregloPacientes: Paciente[] = [];
   pacienteSeleccionado: Paciente;
   arregloMedicamentos: Medicamento[] = [];
+  dimensionArreglo: number;
 
   constructor() {
     this.pacienteSeleccionado = new Paciente();
     this.pacienteSeleccionado.Medicamentos =  [];
+    this.dimensionArreglo = this.arregloPacientes.length;
   }
   agregarPaciente(paciente) {
-    console.log(JSON.stringify(this.arregloPacientes));
+    paciente.Id = this.arregloPacientes.length + 1;
     this.arregloPacientes.push(paciente);
     console.log(JSON.stringify(this.arregloPacientes));
   }
   agregarMedicamento(medicamento) {
-    console.log(JSON.stringify(this.arregloMedicamentos));
     this.pacienteSeleccionado.Medicamentos.push(medicamento);
     console.log(JSON.stringify(this.arregloMedicamentos));
   }
@@ -32,6 +33,5 @@ export class AppComponent {
     this.pacienteSeleccionado = new Paciente();
     console.log("Selecion: " + JSON.stringify(paciente));
     this.pacienteSeleccionado =  paciente;
-
   }
 }

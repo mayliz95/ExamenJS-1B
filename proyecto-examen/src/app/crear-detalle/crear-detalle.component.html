@@ -1,99 +1,87 @@
 <div>
   <div class="row">
     <div class="col-sm-2"></div>
-    <div class="col-sm-8">
-      <h3>Crear Detalle</h3>
+    <div class="col-sm-10">
+      <h3>Crear Medicamento</h3>
     </div>
-    <div class="col-sm-2"></div>
   </div>
   <br>
-
+  <br>
   <div class="row">
-    <div class="col-sm-4">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-6">
       <label>Gramos a Ingerir</label>
     </div>
     <div class="col-sm-1"></div>
-    <div class="col-sm-5">
-      <input id="inputGramosAIngerir" type="text" size="20" pInputText name="GramosIngerir" [(ngModel)]="medicamento.gramosAIngerir">
+    <div class="col-sm-4">
+      <input id="inputGramosAIngerir" type="text" size="10" pInputText name="GramosIngerir" [(ngModel)]="medicamento.gramosAIngerir">
     </div>
-    <div class="col-sm-2"></div>
+    <div class="col-sm-1"></div>
   </div>
 
   <div class="row">
-    <div class="col-sm-4">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-6">
       <label>Nombre</label>
     </div>
     <div class="col-sm-1"></div>
-    <div class="col-sm-5">
-      <input id="inputNombre" type="text" size="20" pInputText name="nombre" [(ngModel)]="medicamento.nombre">
+    <div class="col-sm-4">
+      <input id="inputNombre" type="text" size="10" pInputText name="nombre" [(ngModel)]="medicamento.nombre">
     </div>
-    <div class="col-sm-2"></div>
   </div>
 
   <div class="row">
-    <div class="col-sm-4">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-6">
       <label>Composicion</label>
     </div>
     <div class="col-sm-1"></div>
-    <div class="col-sm-5">
-      <input id="inputComposicion" type="text" size="20" pInputText name="Composicion" [(ngModel)]="medicamento.composicion">
+    <div class="col-sm-4">
+      <input id="inputComposicion" type="text" size="10" pInputText name="Composicion" [(ngModel)]="medicamento.composicion">
     </div>
-    <div class="col-sm-2"></div>
   </div>
 
   <div class="row">
-    <div class="col-sm-4">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-6">
       <label>Usado Para</label>
     </div>
     <div class="col-sm-1"></div>
-    <div class="col-sm-5">
-      <input id="inputUsadoPara" type="text" size="20" pInputText name="UsadoPara" [(ngModel)]="medicamento.usadoPara">
+    <div class="col-sm-4">
+      <input id="inputUsadoPara" type="text" size="10" pInputText name="UsadoPara" [(ngModel)]="medicamento.usadoPara">
     </div>
-    <div class="col-sm-2"></div>
   </div>
 
   <div class="row">
-    <div class="col-sm-4">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-6">
       <label>Fecha Caducidad</label>
     </div>
     <div class="col-sm-1"></div>
-    <div class="col-sm-5">
-      <input id="inputFechaCaducidad" type="text" size="20" pInputText name="FechaCaducidad" [(ngModel)]="medicamento.fechaCaducidad">
+    <div class="col-sm-4">
+      <input id="inputFechaCaducidad" type="text" size="10" pInputText name="FechaCaducidad" [(ngModel)]="medicamento.fechaCaducidad">
     </div>
-    <div class="col-sm-2"></div>
   </div>
 
   <div class="row">
-    <div class="col-sm-4">
-      <label>numeroPastillas</label>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-6">
+      <label>Número de Pastillas</label>
     </div>
     <div class="col-sm-1"></div>
-    <div class="col-sm-5">
-      <input id="inputNumPastillas" type="text" size="20" pInputText name="numeroPastillas" [(ngModel)]="medicamento.numeroPastillas">
+    <div class="col-sm-4">
+      <input id="inputNumPastillas" type="text" size="10" pInputText name="numeroPastillas" [(ngModel)]="medicamento.numeroPastillas">
     </div>
-    <div class="col-sm-2"></div>
   </div>
-
-  <!--<div class="row">-->
-    <!--<div class="col-sm-4">-->
-      <!--<label>Paciente Id</label>-->
-    <!--</div>-->
-    <!--<div class="col-sm-1"></div>-->
-    <!--<div class="col-sm-5">-->
-      <!--<input id="inputPacienteId" type="text" size="20" pInputText>-->
-    <!--</div>-->
-    <!--<div class="col-sm-2"></div>-->
-  <!--</div>-->
-
   <br>
   <div class="row">
-    <div class="col-sm-1"></div>
-    <div class="col-sm-4">
-      <button pButton type="button" label="Limpiar" class="ui-button-success"></button>
-    </div>
     <div class="col-sm-2"></div>
     <div class="col-sm-4">
-      <button pButton type="button" label="Crear" class="ui-button-success" (click)="guardarEnArreglo()"></button>
+      <button type="button" class="btn btn-secondary" (click)="limpiar()">Limpiar</button>
+    </div>
+    <div class="col-sm-1"></div>
+    <div class="col-sm-4">
+      <button type="button" class="btn btn-secondary" (click)="guardarEnArreglo()">Crear</button>
     </div>
     <div class="col-sm-1"></div>
   </div>

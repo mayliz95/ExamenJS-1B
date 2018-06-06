@@ -24,4 +24,8 @@ export class CrearDetalleComponent implements OnInit {
     this.medicamento = new Medicamento();
   }
 
+  limpiar() {
+    this.medicamento = new Medicamento();
+  }
+
 }
