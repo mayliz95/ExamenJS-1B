@@ -38,12 +38,12 @@
 <div class="row" style="padding-top: 20px;">
   <div class="col-sm-1"></div>
   <div class="col-sm-4">
-    <app-crear-detalle (medicamentoCreado)="agregarMedicamento($event)"></app-crear-detalle>
+    <app-crear-detalle (medicamentoCreado)="agregarMedicamento($event)" *ngIf="pacienteSeleccionado.Nombres!==undefined"></app-crear-detalle>
   </div>
   <div class="col-sm-2"></div>
   <div class="col-sm-4" style="padding-top: 40px">
-    <p-card title='{{pacienteSeleccionado.Nombres}} {{pacienteSeleccionado.Apellidos }}' [style]="{width: '360px'}">
-      <div *ngIf="pacienteSeleccionado.Nombres!=undefined">El paciente nació el: {{pacienteSeleccionado.Fecha_Nacimiento}}, tiene {{pacienteSeleccionado.Hijos}} y {{pacienteSeleccionado.Tiene_Seguro}} tiene seguro</div>
+    <p-card title='{{pacienteSeleccionado.Nombres}} {{pacienteSeleccionado.Apellidos }}' [style]="{width: '360px'}" *ngIf="pacienteSeleccionado.Nombres!==undefined">
+      <div>El paciente nació el: {{pacienteSeleccionado.Fecha_Nacimiento}}, tiene {{pacienteSeleccionado.Hijos}} y {{pacienteSeleccionado.Tiene_Seguro}} tiene seguro</div>
     </p-card>
   </div>
   <div class="col-sm-1"></div>
@@ -52,7 +52,7 @@
 <div class="row" style="padding-top: 100px;">
   <div class="col-sm-2"></div>
   <div class="col-sm-8" style="padding-bottom: 60px">
-    <app-tabla-primeng [datosTablaDetalle]="pacienteSeleccionado.Medicamentos"></app-tabla-primeng>
+    <app-tabla-primeng [datosTablaDetalle]="pacienteSeleccionado.Medicamentos" *ngIf="pacienteSeleccionado.Medicamentos.length!==0"></app-tabla-primeng>
   </div>
   <div class="col-sm-2"></div>
 </div>
